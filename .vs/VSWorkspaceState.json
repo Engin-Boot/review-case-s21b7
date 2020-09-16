@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\sample-review",
+    "\\Sender"
   ],
+  "SelectedNode": "\\Coverage.yml",
   "PreviewInSolutionExplorer": false
 }
