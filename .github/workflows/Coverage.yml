@@ -1,46 +1,46 @@
-name: Coverage
+# name: Coverage
 
  
 
-on: 
+# on: 
 
-    push:
+    # push:
 
-        branches: [master]
-
- 
-
-jobs:
-
-  build:
+        # branches: [master]
 
  
 
-    runs-on: windows-latest
+# jobs:
+
+  # build:
 
  
 
-    steps:
+    # runs-on: windows-latest
 
-      - uses: actions/checkout@v1
+ 
 
-      - name: Setup .NET Core
+    # steps:
 
-        uses: actions/setup-dotnet@v1
+      # - uses: actions/checkout@v1
 
-        with:
+      # - name: Setup .NET Core
 
-           dotnet-version: 3.1.101
+        # uses: actions/setup-dotnet@v1
+
+        # with:
+
+           # dotnet-version: 3.1.101
 
         
 
-      - name: Generate coverage report
+      # - name: Generate coverage report
 
-        run: dotnet test --collect:"XPlat Code Coverage"
+        # run: dotnet test --collect:"XPlat Code Coverage"
 
       
 
-      - name: Check Coverage
+      # - name: Check Coverage
 
-        run: powershell ./coverage.ps1 -linerate 1
+        # run: powershell ./coverage.ps1 -linerate 1
 
