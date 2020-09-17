@@ -31,7 +31,8 @@ namespace Sender
             }
 
             string Comment = builder.ToString();
-            string[] word = Comment.Split(' ');
+            string RemoveHeader = string.Join(" ", Comment.Split().Skip(1));
+            string[] word = RemoveHeader.Split(' ');
             OutputToConsole.WordsDisplayOnConsole(word);
         }
     }
