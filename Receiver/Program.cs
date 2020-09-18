@@ -9,47 +9,35 @@ namespace Receiver
 {
     class Program
     {
+        static List<string> inputvalues = new List<string>();
         static void Main(string[] args)
         {
-            using (var outputCapture = new OutputCapture())
+            string s;
+            while ((s = Console.ReadLine()) != null)
             {
-                //var stuff = outputCapture.Captured.ToString();
-                //int val = Convert.ToInt32(stuff);
-                string[] words = { "No", "Comments", "Read", "Error", "No", "Comments","No","Comments" };
-                Dictionary<String, int> WordCount = new Dictionary<String, int>();
-                WordCount=WordAndWordCount.WordsAndFrequency(words);
-                WriteToCsvFile.RedirectToCsvFile(WordCount);
-                //Console.ReadKey();
+                //Console.WriteLine(s);
+                inputvalues.Add(s);
             }
-        }
-        public class OutputCapture : TextWriter, IDisposable
-        {
-            private TextWriter stdOutWriter;
-            public TextWriter Captured { get; private set; }
-            public override Encoding Encoding { get { return Encoding.ASCII; } }
+            //ReadConsoleOutput rd = new ReadConsoleOutput();
+            //rd.ParseInputList();
+            //foreach(var str in inputvalues)
+            //{
+            //    Console.WriteLine(str);
+            //}
 
-            public OutputCapture()
-            {
-                this.stdOutWriter = Console.Out;
-                Console.SetOut(this);
-                Captured = new StringWriter();
-            }
+            string[] words = inputvalues.ToArray();
 
-            override public void Write(string output)
-            {
+            //foreach (var str in str2)
+            //{
+            //    Console.WriteLine(str);
+            //}
+            //string[] words = { "No", "Comments", "Read", "Error", "No", "Comments","No","Comments" };
 
-                Captured.Write(output);
-                stdOutWriter.Write(output);
-            }
-
-            override public void WriteLine(string output)
-            {
-
-                Captured.WriteLine(output);
-                stdOutWriter.WriteLine(output);
-            }
-
-
+            Dictionary<String, int> WordCount = new Dictionary<String, int>();
+            WordCount=WordAndWordCount.WordsAndFrequency(words);
+            WriteToCsvFile.RedirectToCsvFile(WordCount);
+            //Console.ReadKey();
+            
         }
     }
 }
