@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.github",
+    "\\.github\\workflows",
     "\\sample-review",
-    "\\Sender"
+    "\\Sender",
+    "\\Sender.Tests"
   ],
-  "SelectedNode": "\\Sender",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }

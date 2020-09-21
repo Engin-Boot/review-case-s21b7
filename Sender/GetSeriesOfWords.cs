@@ -11,6 +11,7 @@ namespace Sender
     {
         List<string> DateTimeColumn = new List<string>();
         List<string> CommentColumn = new List<string>();
+        
         public static string[] ConvertCommentsToWords(string path)
         {
             GetSeriesOfWords obj = new GetSeriesOfWords();
@@ -32,17 +33,17 @@ namespace Sender
             }
 
             string Comment = builder.ToString();
-            string RemoveHeader = RemoveHeaderFromWord(Comment);
+           string removeHeader = RemoveHeaderFromWord(Comment);
 
-            string[] word = RemoveHeader.Split(' ');
+            string[] word =removeHeader.Split(' ');
             OutputToConsole.WordsDisplayOnConsole(word);
             ColumFilter.dateTimeCommentsFilter(obj.DateTimeColumn, obj.CommentColumn);
             return word;
         }
 
-        public static string RemoveHeaderFromWord(string wordWithHeader)
+        public static string RemoveHeaderFromWord(string removeHeader)
         {
-            string wordWithOutHeader = string.Join(" ", wordWithHeader.Split().Skip(1));
+            string wordWithOutHeader = string.Join(" ", removeHeader.Split().Skip(1));
             return wordWithOutHeader;
 
         }
