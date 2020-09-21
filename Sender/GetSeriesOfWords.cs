@@ -10,12 +10,12 @@ namespace Sender
     public class GetSeriesOfWords
     {
         List<string> DateTimeColumn = new List<string>();
-            List<string> CommentColumn = new List<string>();
+        List<string> CommentColumn = new List<string>();
         public static string[] ConvertCommentsToWords(string path)
         {
-            GetSeriesOfWords obj= new GetSeriesOfWords();
+            GetSeriesOfWords obj = new GetSeriesOfWords();
             var ReadingCsvFile = new StreamReader(File.OpenRead(@"D:\Review_Csv_File.csv"));
-            
+
 
             while (!ReadingCsvFile.EndOfStream)
             {
@@ -33,18 +33,20 @@ namespace Sender
             }
 
             string Comment = builder.ToString();
-              string RemoveHeader = RemoveHeaderFromWord(Comment);
-            
+            string RemoveHeader = RemoveHeaderFromWord(Comment);
+
             string[] word = RemoveHeader.Split(' ');
             OutputToConsole.WordsDisplayOnConsole(word);
+            ColumFilter.dateTimeCommentsFilter(obj.DateTimeColumn, obj.CommentColumn);
             return word;
         }
 
-         public static string RemoveHeaderFromWord(string wordWithHeader)
+        public static string RemoveHeaderFromWord(string wordWithHeader)
         {
             string wordWithOutHeader = string.Join(" ", wordWithHeader.Split().Skip(1));
             return wordWithOutHeader;
 
         }
     }
+    
 }

@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColumFilter.cs" />
     <Compile Include="CsvFileReader.cs" />
     <Compile Include="GetSeriesOfWords.cs" />
     <Compile Include="OutputToConsole.cs" />

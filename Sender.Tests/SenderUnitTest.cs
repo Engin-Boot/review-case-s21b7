@@ -14,11 +14,10 @@ namespace Sender.Tests
         public void TestFileExistsOrNot()
         {
             bool expectedPath = true;
-            bool actualPath= Program.pathOfFile();
+            bool actualPath = Program.pathOfFile();
             Assert.Equal(expectedPath, actualPath);
         }
 
-        
         [Fact]
         public void CheckIfCsvFileIsEmptyorNot()
         {
@@ -29,25 +28,25 @@ namespace Sender.Tests
         [Fact]
         public void TestIfReadingFromCsvIsCorrectorNot()
         {
-          
-        }
 
+        }
         [Fact]
         public void TestIfGetStringOfWordMethodIsretueningWordorSentence()
         {
 
-            string[] actual = GetSeriesOfWord.ConvertCommentsToWords(path);
+            string[] actual = GetSeriesOfWords.ConvertCommentsToWords(path);
             Assert.Null(actual);
         }
-
 
         [Fact]
         public void TestremovingHeaderIssucessfullOrNot()
         {
             string[] actualWordWithHeader = { "comment", "what" };
-            string exceptedWordWithoutHeader = GetSeriesOfWord.RemoveHeaderFromWord(path);
+            string exceptedWordWithoutHeader = GetSeriesOfWords.RemoveHeaderFromWord(path);
             Assert.False(actualWordWithHeader[0] == char.ToString(exceptedWordWithoutHeader[0]) && actualWordWithHeader[1] != char.ToString(exceptedWordWithoutHeader[0]));
 
         }
+
+
     }
 }
