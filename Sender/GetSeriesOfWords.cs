@@ -9,31 +9,42 @@ namespace Sender
 {
     public class GetSeriesOfWords
     {
-        public static void ConvertCommentsToWords(string path)
-        {
-            var ReadingCsvFile = new StreamReader(File.OpenRead(@"D:\Review_Csv_File.csv"));
-            List<string> DateTimeColumn = new List<string>();
+        List<string> DateTimeColumn = new List<string>();
             List<string> CommentColumn = new List<string>();
+        public static string[] ConvertCommentsToWords(string path)
+        {
+            GetSeriesOfWords obj= new GetSeriesOfWords();
+            var ReadingCsvFile = new StreamReader(File.OpenRead(@"D:\Review_Csv_File.csv"));
+            
 
             while (!ReadingCsvFile.EndOfStream)
             {
                 var StoreDataEachRowOfCsvFile = ReadingCsvFile.ReadLine();
                 var SplitColumn = StoreDataEachRowOfCsvFile.Split(',', '\n');
-                DateTimeColumn.Add(SplitColumn[0]);
-                CommentColumn.Add(SplitColumn[1]);
+                obj.DateTimeColumn.Add(SplitColumn[0]);
+                obj.CommentColumn.Add(SplitColumn[1]);
             }
 
             StringBuilder builder = new StringBuilder();
 
-            foreach (string CommentData in CommentColumn)
+            foreach (string CommentData in obj.CommentColumn)
             {
                 builder.Append(CommentData);
             }
 
             string Comment = builder.ToString();
-            string RemoveHeader = string.Join(" ", Comment.Split().Skip(1));
+              string RemoveHeader = RemoveHeaderFromWord(Comment);
+            
             string[] word = RemoveHeader.Split(' ');
             OutputToConsole.WordsDisplayOnConsole(word);
+            return word;
+        }
+
+         public static string RemoveHeaderFromWord(string wordWithHeader)
+        {
+            string wordWithOutHeader = string.Join(" ", wordWithHeader.Split().Skip(1));
+            return wordWithOutHeader;
+
         }
     }
 }

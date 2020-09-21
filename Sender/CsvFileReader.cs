@@ -10,7 +10,7 @@ namespace Sender
             bool val = false;
             if (pathExists == true)
             {
-                GetSeriesOfWords.ConvertCommentsToWords(path);
+              string[] getseriesofWords=  GetSeriesOfWords.ConvertCommentsToWords(path);
                 val = true;
                 return val;
             }

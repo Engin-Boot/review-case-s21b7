@@ -39,5 +39,15 @@ namespace Sender.Tests
             string[] actual = GetSeriesOfWord.ConvertCommentsToWords(path);
             Assert.Null(actual);
         }
+
+
+        [Fact]
+        public void TestremovingHeaderIssucessfullOrNot()
+        {
+            string[] actualWordWithHeader = { "comment", "what" };
+            string exceptedWordWithoutHeader = GetSeriesOfWord.RemoveHeaderFromWord(path);
+            Assert.False(actualWordWithHeader[0] == char.ToString(exceptedWordWithoutHeader[0]) && actualWordWithHeader[1] != char.ToString(exceptedWordWithoutHeader[0]));
+
+        }
     }
 }
