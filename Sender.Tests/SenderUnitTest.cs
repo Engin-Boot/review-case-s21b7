@@ -26,27 +26,44 @@ namespace Sender.Tests
             Assert.Equal(expected, actual);
         }
 
-        //// [Fact]
-        //public void TestIfReadingFromCsvIsCorrectorNot()
-        //{
+        [Fact]
+        public void TestIfReadingFromCsvIsCorrectFormorNot()
+        {
+            Assert.True(GetSeriesOfWords.ReadingFromCsvFile(path, new GetSeriesOfWords()));
+        }
 
-        //}
-        // [Fact]
-        //public void TestIfGetStringOfWordMethodIsretueningWordorSentence()
+      //  [Fact]
+        //public void TestGetSeriesOfWordIsSucessfullOrNot()
         //{
+        //    string[] actualWord = GetSeriesOfWords.ConvertCommentsToWords(path);
 
-        //    string[] actual = GetSeriesOfWords.ConvertCommentsToWords(path);
-        //    Assert.Null(actual);
-        ////}
-        //[Fact]
-        //public void TestremovingHeaderIssucessfullOrNot()
-        //{
-        //    string[] actualWordWithHeader = { "comment", "what" };
-        //    string exceptedWordWithoutHeader = GetSeriesOfWords.RemoveHeaderFromWord(path);
-        //    Assert.True(actualWordWithHeader[0] == char.ToString(exceptedWordWithoutHeader[0]) && actualWordWithHeader[1] != char.ToString(exceptedWordWithoutHeader[0]));
+        //    //string[] seriesOfWord = { "what", "does", "this", "help", "with" };
+        //    Assert.Equal("what", actualWord[0]);
+        //    Assert.Equal("does", actualWord[1]);
 
 
         //}
+        [Fact]
+        public void TestBuildString()
+        {
+            GetSeriesOfWords obj = new GetSeriesOfWords();
+            obj.CommentColumn.Add("Test");
+            obj.CommentColumn.Add("Case");
+            string expected = "TestCase";
+            string actual = GetSeriesOfWords.BuildString(obj);
+            Assert.Equal(expected, actual);
+        }
+
+
+        [Fact]
+        public void TestremovingHeaderIssucessfullOrNot()
+        {
+            string actualWordWithHeader = "comment Test Case";
+            string actualWordWithoutHeader = GetSeriesOfWords.RemoveHeaderFromWord(actualWordWithHeader);
+            string expectedWordWithoutHeader = "Test Case";
+            Assert.Equal(actualWordWithoutHeader, expectedWordWithoutHeader);
+        }
+
 
     }
 }
