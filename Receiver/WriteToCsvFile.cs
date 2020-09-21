@@ -13,7 +13,7 @@ namespace Receiver
         {
             try
             {
-                using (var writeToCsvFile = new StreamWriter(@"D:\Write.csv"))
+                using (var writeToCsvFile = new StreamWriter(@"D:\Receiver_csv\Write.csv"))
                 {
                     foreach (KeyValuePair<string, int> wordisKeyWorkFrequencyisValue in wordAndWordFrequency)
                     {

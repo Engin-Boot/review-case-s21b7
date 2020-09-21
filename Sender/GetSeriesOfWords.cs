@@ -14,7 +14,7 @@ namespace Sender
         public static string[] ConvertCommentsToWords(string path)
         {
             GetSeriesOfWords obj = new GetSeriesOfWords();
-            var ReadingCsvFile = new StreamReader(File.OpenRead(@"D:\Review_Csv_File.csv"));
+            var ReadingCsvFile = new StreamReader(File.OpenRead(@"D:\Sender_csv\Sender_Csv_File.csv"));
 
 
             while (!ReadingCsvFile.EndOfStream)
