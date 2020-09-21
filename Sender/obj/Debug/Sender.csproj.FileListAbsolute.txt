@@ -8,7 +8,6 @@ C:\Users\320087252\source\repos\CaseStudy-S21B7\Sender\obj\Debug\Sender.csprojAs
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Sender\bin\Debug\Sender.exe.config
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Sender\bin\Debug\Sender.exe
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Sender\bin\Debug\Sender.pdb
-C:\Users\320087165\Documents\GitHub\review-case-s21b7\Sender\obj\Debug\Sender.csprojAssemblyReference.cache
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Sender\obj\Debug\Sender.csproj.CoreCompileInputs.cache
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Sender\obj\Debug\Sender.exe
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Sender\obj\Debug\Sender.pdb

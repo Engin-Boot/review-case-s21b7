@@ -8,7 +8,6 @@ C:\Users\320087252\source\repos\CaseStudy-S21B7\Receiver\obj\Debug\Receiver.pdb
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Receiver\bin\Debug\Receiver.exe.config
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Receiver\bin\Debug\Receiver.exe
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Receiver\bin\Debug\Receiver.pdb
-C:\Users\320087165\Documents\GitHub\review-case-s21b7\Receiver\obj\Debug\Receiver.csprojAssemblyReference.cache
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Receiver\obj\Debug\Receiver.csproj.CoreCompileInputs.cache
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Receiver\obj\Debug\Receiver.exe
 C:\Users\320087165\Documents\GitHub\review-case-s21b7\Receiver\obj\Debug\Receiver.pdb
