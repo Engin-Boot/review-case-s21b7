@@ -18,14 +18,15 @@ namespace Sender.Tests
             Assert.Equal(expectedPath, actualPath);
         }
 
-       // [Fact]
-       // public void CheckIfCsvFileIsEmptyorNot()
-       // {
-       //     string expected = "0";
-       //     string actual = Program.fileLength();
-       //     Assert.Equal(expected, actual);
-       // }
-       //// [Fact]
+        //[Fact]
+        //public void CheckIfCsvFileIsEmptyorNot()
+        //{
+        //    string expected = "0";
+        //    string actual = Program.fileLength();
+        //    Assert.Equal(expected, actual);
+        //}
+
+        //// [Fact]
         //public void TestIfReadingFromCsvIsCorrectorNot()
         //{
 
