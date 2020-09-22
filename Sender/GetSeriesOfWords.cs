@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Sender
 {
@@ -15,14 +14,14 @@ namespace Sender
         public static string[] ConvertCommentsToWords(string path)
         {
             GetSeriesOfWords obj = new GetSeriesOfWords();
-            bool csvFileread = ReadingFromCsvFile(path, obj);
+            ReadingFromCsvFile(path, obj);
 
-            string Comment = BuildString(obj);
-           string removeHeader = RemoveHeaderFromWord(Comment);
+            string comment = BuildString(obj);
+           string removeHeader = RemoveHeaderFromWord(comment);
 
             string[] word =removeHeader.Split(' ');
             OutputToConsole.WordsDisplayOnConsole(word);
-            ColumFilter.dateTimeCommentsFilter(obj.DateTimeColumn, obj.CommentColumn);
+            ColumFilter.DateTimeCommentsFilter(obj.DateTimeColumn, obj.CommentColumn);
             return word;
         }
 
@@ -35,14 +34,17 @@ namespace Sender
 
         public static bool ReadingFromCsvFile(string path, GetSeriesOfWords obj)
         {
-            var ReadingCsvFile = new StreamReader(File.OpenRead(Environment.CurrentDirectory + @"\Sender_csv\Sender_Csv_File.csv"));
+            var readingCsvFile = new StreamReader(File.OpenRead(Environment.CurrentDirectory + @"\Sender_csv\Sender_Csv_File.csv"));
 
-            while (!ReadingCsvFile.EndOfStream)
+            while (!readingCsvFile.EndOfStream)
             {
-                var StoreDataEachRowOfCsvFile = ReadingCsvFile.ReadLine();
-                var SplitColumn = StoreDataEachRowOfCsvFile.Split(',', '\n');
-                obj.DateTimeColumn.Add(SplitColumn[0]);
-                obj.CommentColumn.Add(SplitColumn[1]);
+                var storeDataEachRowOfCsvFile = readingCsvFile.ReadLine();
+                if (storeDataEachRowOfCsvFile != null)
+                {
+                    var splitColumn = storeDataEachRowOfCsvFile.Split(',', '\n');
+                    obj.DateTimeColumn.Add(splitColumn[0]);
+                    obj.CommentColumn.Add(splitColumn[1]);
+                }
             }
             return true;
         }
@@ -51,9 +53,9 @@ namespace Sender
         {
             StringBuilder builder = new StringBuilder();
 
-            foreach (string CommentData in obj.CommentColumn)
+            foreach (string commentData in obj.CommentColumn)
             {
-                builder.Append(CommentData);
+                builder.Append(commentData);
             }
             return builder.ToString();
         }

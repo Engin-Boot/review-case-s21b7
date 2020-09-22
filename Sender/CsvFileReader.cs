@@ -7,16 +7,16 @@ namespace Sender
         public static bool CheckAndReadCsvFile(string path)
         {
             bool pathExists = CheckPathExistOrNot(path);
-            bool val = false;
-            if (pathExists == true)
+           
+            if (pathExists)
             {
-                string[] getseriesofWords = GetSeriesOfWords.ConvertCommentsToWords(path);
-                val = true;
-                return val;
+                GetSeriesOfWords.ConvertCommentsToWords(path);
+                
+                return true;
             }
             else
             {
-                return val;
+                return false;
             }
         }
         public static bool CheckPathExistOrNot(string path)

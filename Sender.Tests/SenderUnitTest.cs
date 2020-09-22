@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Sender.Tests
@@ -14,7 +10,7 @@ namespace Sender.Tests
         public void TestFileExistsOrNot()
         {
             bool expectedPath = true;
-            bool actualPath = Program.pathOfFile();
+            bool actualPath = Program.PathOfFile();
             Assert.Equal(expectedPath, actualPath);
         }
 
@@ -22,7 +18,7 @@ namespace Sender.Tests
         public void CheckIfCsvFileIsEmptyorNot()
         {
             string expected = "0";
-            string actual = Program.fileLength();
+            string actual = Program.FileLength();
             Assert.Equal(expected, actual);
         }
 
