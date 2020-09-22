@@ -5,24 +5,22 @@ namespace Receiver
 {
     class Program
     {
-        static List<string> inputvalues = new List<string>();
+        private static readonly List<string> InputValues = new List<string>();
         static void Main()
         {
             string s;
-            string status;
             while ((s = Console.ReadLine()) != null)
             {
                 //Console.WriteLine(s);
-                inputvalues.Add(s);
+                InputValues.Add(s);
             }
             
-            string[] words = inputvalues.ToArray();
+            string[] words = InputValues.ToArray();
 
-            WriteToCsvFile wtcf=new WriteToCsvFile();
-            WordAndWordCount wawc=new WordAndWordCount();
-            Dictionary<String, int> WordCount;
-            WordCount=wawc.WordsAndFrequency(words);
-            status=wtcf.RedirectToCsvFile(WordCount);
+            WriteToCsvFile writeCsvFile=new WriteToCsvFile();
+            WordAndWordCount wordCount=new WordAndWordCount();
+            var wordCount2 = wordCount.WordsAndFrequency(words) ?? throw new Exception();
+            var status = writeCsvFile.RedirectToCsvFile(wordCount2);
             Console.WriteLine(status);
             //Console.ReadKey();
             

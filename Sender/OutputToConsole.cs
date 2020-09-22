@@ -5,10 +5,11 @@ namespace Sender
     {
         public static void WordsDisplayOnConsole(string[] words)
         {
-            for (int i = 0; i <words.Length; i++)
+            foreach (var t in words)
             {
-                Console.WriteLine(words[i]);
+                Console.WriteLine(t);
             }
+
             Console.ReadKey();
         }
     }

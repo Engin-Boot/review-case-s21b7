@@ -8,7 +8,7 @@ namespace Sender
 {
     public class GetSeriesOfWords
     {
-       List<string> DateTimeColumn = new List<string>();
+        private readonly List<string> _dateTimeColumn = new List<string>();
       public List<string> CommentColumn = new List<string>();
         
         public static string[] ConvertCommentsToWords(string path)
@@ -21,7 +21,7 @@ namespace Sender
 
             string[] word =removeHeader.Split(' ');
             OutputToConsole.WordsDisplayOnConsole(word);
-            ColumFilter.DateTimeCommentsFilter(obj.DateTimeColumn, obj.CommentColumn);
+            ColumFilter.DateTimeCommentsFilter(obj._dateTimeColumn, obj.CommentColumn);
             return word;
         }
 
@@ -42,7 +42,7 @@ namespace Sender
                 if (storeDataEachRowOfCsvFile != null)
                 {
                     var splitColumn = storeDataEachRowOfCsvFile.Split(',', '\n');
-                    obj.DateTimeColumn.Add(splitColumn[0]);
+                    obj._dateTimeColumn.Add(splitColumn[0]);
                     obj.CommentColumn.Add(splitColumn[1]);
                 }
             }

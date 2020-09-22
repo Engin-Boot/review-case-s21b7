@@ -7,16 +7,15 @@ namespace Sender
     {
         public static void DateTimeCommentsFilter(List<string> dateTimeColumnData, List<string> comment)
         {
-            // string[] words = ConvertDateTimefromListToString.Split(' ');
             Console.WriteLine("enter column Number");
             string userColumnInput = Console.ReadLine();
             switch (userColumnInput)
             {
                 case "0":
-                    DateTimeColumn(dateTimeColumnData);
+                    ColumnSplit(dateTimeColumnData);
                     break;
                 case "1":
-                    CommentColumn(comment);
+                    ColumnSplit(comment);
                     break;
                 default:
                     Console.WriteLine("enter Correct Input");
@@ -24,20 +23,11 @@ namespace Sender
             }
         }
 
-        public static void DateTimeColumn(List<string> date)
+        public static void ColumnSplit(List<string> columnData)
         {
-            string str = date.ToString();
-            string[] newstr = str.Split(' ');
-            OutputToConsole.WordsDisplayOnConsole(newstr);
+            string str = columnData.ToString();
+            string[] wordSplit = str.Split(' ');
+            OutputToConsole.WordsDisplayOnConsole(wordSplit);
         }
-
-        public static void CommentColumn(List<string> comment)
-        {
-            string str = comment.ToString();
-            string[] newstr = str.Split(' ');
-            OutputToConsole.WordsDisplayOnConsole(newstr);
-
-        }
-
     }
 }
