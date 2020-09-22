@@ -9,8 +9,9 @@ namespace Receiver
 {
     public class WriteToCsvFile
     {
-        public static void RedirectToCsvFile(Dictionary<String, int> wordAndWordFrequency)
+        public string RedirectToCsvFile(Dictionary<String, int> wordAndWordFrequency)
         {
+            string logstatus;
             try
             {
                 using (var writeToCsvFile = new StreamWriter(@"C: \Users\320087165\Documents\GitHub\review -case-s21b7\Receiver_csv\Write.csv"))
@@ -21,10 +22,14 @@ namespace Receiver
                     }
                 }
                 Console.WriteLine("Writting To File Successfull");
+                logstatus = "Writting To File Successfull";
+                return logstatus;
             }
             catch(Exception e)
             {
-                Console.WriteLine("Erro While Writting To File: " + e);
+                Console.WriteLine("Error While Writting To File: " + e);
+                logstatus = "Error While Writting To File";
+                return logstatus;
             }
             
         }

@@ -32,10 +32,10 @@ namespace Receiver
             //    Console.WriteLine(str);
             //}
             //string[] words = { "No", "Comments", "Read", "Error", "No", "Comments","No","Comments" };
-
+            WriteToCsvFile _wtcf=new WriteToCsvFile();
             Dictionary<String, int> WordCount = new Dictionary<String, int>();
             WordCount=WordAndWordCount.WordsAndFrequency(words);
-            WriteToCsvFile.RedirectToCsvFile(WordCount);
+            string status=_wtcf.RedirectToCsvFile(WordCount);
             //Console.ReadKey();
             
         }
