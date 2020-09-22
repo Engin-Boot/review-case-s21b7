@@ -5,7 +5,7 @@ namespace Receiver
 {
     public class WordAndWordCount
     {
-        public static Dictionary<string,int> WordsAndFrequency(string[] words)
+        public Dictionary<string,int> WordsAndFrequency(string[] words)
         {
             Dictionary<String, int> wordAndWordFrequency = new Dictionary<String, int>();
             try
@@ -22,6 +22,7 @@ namespace Receiver
                     }
                 }
                 Console.WriteLine("Word Frequency Count Successfull");
+                return wordAndWordFrequency;
             }
             catch(Exception e)
             {
