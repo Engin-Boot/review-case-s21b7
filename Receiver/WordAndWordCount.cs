@@ -10,18 +10,18 @@ namespace Receiver
             Dictionary<String, int> wordAndWordFrequency = new Dictionary<String, int>();
             try
             {
-                for (int i = 0; i < words.Length; i++)
+                foreach (var t in words)
                 {
-                    if (wordAndWordFrequency.ContainsKey(words[i]))
+                    if (wordAndWordFrequency.ContainsKey(t))
                     {
-                        wordAndWordFrequency[words[i]] = wordAndWordFrequency[words[i]] + 1;
+                        wordAndWordFrequency[t] = wordAndWordFrequency[t] + 1;
                     }
                     else
                     {
-                        wordAndWordFrequency.Add(words[i], 1);
+                        wordAndWordFrequency.Add(t, 1);
                     }
                 }
-                Console.WriteLine("Word Frequency Count Successfull");
+                Console.WriteLine("Word Frequency Count Successful");
                 return wordAndWordFrequency;
             }
             catch(Exception e)

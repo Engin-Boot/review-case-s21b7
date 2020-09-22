@@ -5,7 +5,7 @@ namespace Sender.Tests
 {
     public class SenderUnitTest
     {
-       string path= Environment.CurrentDirectory+ @"\Sender_csv\Sender_Csv_File.csv";
+        private readonly string _path= Environment.CurrentDirectory+ @"\Sender_csv\Sender_Csv_File.csv";
         [Fact]
         public void TestFileExistsOrNot()
         {
@@ -15,7 +15,7 @@ namespace Sender.Tests
         }
 
         [Fact]
-        public void CheckIfCsvFileIsEmptyorNot()
+        public void CheckIfCsvFileIsNull()
         {
             string expected = "0";
             string actual = Program.FileLength();
@@ -23,15 +23,15 @@ namespace Sender.Tests
         }
 
         [Fact]
-        public void TestIfReadingFromCsvIsCorrectFormorNot()
+        public void TestIfReadingFromCsvIsCorrectForm()
         {
-            Assert.True(GetSeriesOfWords.ReadingFromCsvFile(path, new GetSeriesOfWords()));
+            Assert.True(GetSeriesOfWords.ReadingFromCsvFile(_path, new GetSeriesOfWords()));
         }
 
-      //  [Fact]
-        //public void TestGetSeriesOfWordIsSucessfullOrNot()
+        //[Fact]
+        //public void TestGetSeriesOfWords()
         //{
-        //    string[] actualWord = GetSeriesOfWords.ConvertCommentsToWords(path);
+        //    string[] actualWord = GetSeriesOfWords.ConvertCommentsToWords(_path);
 
         //    //string[] seriesOfWord = { "what", "does", "this", "help", "with" };
         //    Assert.Equal("what", actualWord[0]);
@@ -52,7 +52,7 @@ namespace Sender.Tests
 
 
         [Fact]
-        public void TestremovingHeaderIssucessfullOrNot()
+        public void TestToRemoveHeader()
         {
             string actualWordWithHeader = "comment Test Case";
             string actualWordWithoutHeader = GetSeriesOfWords.RemoveHeaderFromWord(actualWordWithHeader);

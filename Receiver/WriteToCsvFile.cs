@@ -9,7 +9,7 @@ namespace Receiver
     {
         public string RedirectToCsvFile(Dictionary<String, int> wordAndWordFrequency)
         {
-            string logstatus;
+            string status;
             try
             {
                 using (var writeToCsvFile = new StreamWriter(@"C: \Users\320087165\Documents\GitHub\review -case-s21b7\Receiver_csv\Write.csv"))
@@ -19,15 +19,15 @@ namespace Receiver
                         writeToCsvFile.WriteLine("{0} , {1}", wordisKeyWorkFrequencyisValue.Key, wordisKeyWorkFrequencyisValue.Value);
                     }
                 }
-                Console.WriteLine("Writting To File Successfull");
-                logstatus = "Writting To File Successfull";
-                return logstatus;
+                Console.WriteLine("Writing To File Successful");
+                status = "Writing To File Successful";
+                return status;
             }
             catch(Exception e)
             {
-                Console.WriteLine("Error While Writting To File: " + e);
-                logstatus = "Error While Writting To File";
-                return logstatus;
+                Console.WriteLine("Error While Writing To File: " + e);
+                status = "Error While Writing To File";
+                return status;
             }
             
         }
