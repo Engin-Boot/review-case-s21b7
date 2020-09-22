@@ -8,6 +8,7 @@ namespace Sender
 {
     public class GetSeriesOfWords
     {
+
         private readonly List<string> _dateTimeColumn = new List<string>();
       public List<string> CommentColumn = new List<string>();
         

@@ -32,3 +32,4 @@ C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Receiver\obj\Deb
 C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Receiver\obj\Debug\Receiver.csproj.CoreCompileInputs.cache
 C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Receiver\obj\Debug\Receiver.exe
 C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Receiver\obj\Debug\Receiver.pdb
+C:\Users\320087165\Documents\GitHub\review-case-s21b7\Receiver\obj\Debug\Receiver.csprojAssemblyReference.cache

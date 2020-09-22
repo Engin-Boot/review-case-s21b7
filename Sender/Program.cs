@@ -19,11 +19,6 @@ namespace Sender
                 return "1";
 
         }
-        public static bool PathOfFile()
-        {
-            string path = Environment.CurrentDirectory + @"\Sender_csv\Sender_Csv_File.csv";
-
-            return File.Exists(path);
-        }
+      
     }
 }

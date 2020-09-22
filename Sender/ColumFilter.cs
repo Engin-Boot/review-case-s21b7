@@ -25,6 +25,7 @@ namespace Sender
 
         public static void ColumnSplit(List<string> columnData)
         {
+            
             string str = columnData.ToString();
             string[] wordSplit = str.Split(' ');
             OutputToConsole.WordsDisplayOnConsole(wordSplit);
