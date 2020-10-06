@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Sender
 {
-    public class ColumFilter
+    public static class ColumFilter
     {
         public static void DateTimeCommentsFilter(List<string> dateTimeColumnData, List<string> comment)
         {
@@ -23,7 +23,7 @@ namespace Sender
             }
         }
 
-        public static void ColumnSplit(List<string> columnData)
+        private static void ColumnSplit(List<string> columnData)
         {
             
             string str = columnData.ToString();

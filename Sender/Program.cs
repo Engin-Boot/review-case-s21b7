@@ -3,7 +3,7 @@ using System.IO;
 
 namespace Sender
 {
-    public class Program
+    public static class Program
     {
         static void Main()
         {

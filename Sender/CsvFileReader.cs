@@ -2,7 +2,7 @@
 using System.IO;
 namespace Sender
 {
-    public class CsvFileReader
+     public static class CsvFileReader
     {
         public static bool CheckAndReadCsvFile(string path)
         {

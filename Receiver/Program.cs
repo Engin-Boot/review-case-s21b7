@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Receiver
 {
-    class Program
+    public static class Program
     {
         private static readonly List<string> InputValues = new List<string>();
         static void Main()

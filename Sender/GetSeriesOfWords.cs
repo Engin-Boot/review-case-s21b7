@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,7 +9,7 @@ namespace Sender
     {
 
         private readonly List<string> _dateTimeColumn = new List<string>();
-      public List<string> CommentColumn = new List<string>();
+      public readonly List<string> CommentColumn = new List<string>();
         
         public static string[] ConvertCommentsToWords(string path)
         {
@@ -30,12 +29,11 @@ namespace Sender
         {
             string wordWithOutHeader = string.Join(" ", removeHeader.Split().Skip(1));
             return wordWithOutHeader;
-
         }
 
         public static bool ReadingFromCsvFile(string path, GetSeriesOfWords obj)
         {
-            var readingCsvFile = new StreamReader(File.OpenRead(Environment.CurrentDirectory + @"\Sender_csv\Sender_Csv_File.csv"));
+            var readingCsvFile = new StreamReader(File.OpenRead(path));
 
             while (!readingCsvFile.EndOfStream)
             {

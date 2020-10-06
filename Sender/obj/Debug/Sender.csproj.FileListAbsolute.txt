@@ -32,3 +32,10 @@ C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Sender\bin\Debug
 C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Sender\obj\Debug\Sender.csproj.CoreCompileInputs.cache
 C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Sender\obj\Debug\Sender.exe
 C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Sender\obj\Debug\Sender.pdb
+C:\Clone\review-case-s21b7\Sender\bin\Debug\Sender.exe.config
+C:\Clone\review-case-s21b7\Sender\bin\Debug\Sender.exe
+C:\Clone\review-case-s21b7\Sender\bin\Debug\Sender.pdb
+C:\Clone\review-case-s21b7\Sender\obj\Debug\Sender.csprojAssemblyReference.cache
+C:\Clone\review-case-s21b7\Sender\obj\Debug\Sender.csproj.CoreCompileInputs.cache
+C:\Clone\review-case-s21b7\Sender\obj\Debug\Sender.exe
+C:\Clone\review-case-s21b7\Sender\obj\Debug\Sender.pdb

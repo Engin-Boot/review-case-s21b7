@@ -98,3 +98,23 @@ C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Receiver.Tests\o
 C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Receiver.Tests\obj\Debug\Receiver.Tests.csproj.CopyComplete
 C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Receiver.Tests\obj\Debug\Receiver.Tests.dll
 C:\Users\320087252\OneDrive - Philips\Desktop\review-case-s21b7\Receiver.Tests\obj\Debug\Receiver.Tests.pdb
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\xunit.runner.reporters.net452.dll
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\xunit.runner.utility.net452.dll
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\xunit.abstractions.dll
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\Receiver.Tests.dll
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\Receiver.Tests.pdb
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\Receiver.exe
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\xunit.assert.dll
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\xunit.core.dll
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\xunit.execution.desktop.dll
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\Receiver.pdb
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\Receiver.exe.config
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\xunit.assert.xml
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\xunit.core.xml
+C:\Clone\review-case-s21b7\Receiver.Tests\bin\Debug\xunit.execution.desktop.xml
+C:\Clone\review-case-s21b7\Receiver.Tests\obj\Debug\Receiver.Tests.csprojAssemblyReference.cache
+C:\Clone\review-case-s21b7\Receiver.Tests\obj\Debug\Receiver.Tests.csproj.CoreCompileInputs.cache
+C:\Clone\review-case-s21b7\Receiver.Tests\obj\Debug\Receiver.Tests.csproj.CopyComplete
+C:\Clone\review-case-s21b7\Receiver.Tests\obj\Debug\Receiver.Tests.dll
+C:\Clone\review-case-s21b7\Receiver.Tests\obj\Debug\Receiver.Tests.pdb
