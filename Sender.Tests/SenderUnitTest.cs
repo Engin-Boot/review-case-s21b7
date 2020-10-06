@@ -9,9 +9,9 @@ namespace Sender.Tests
     {
         private readonly string _path= Environment.CurrentDirectory+ @"\Sender_csv\Sender_Csv_File.csv";
         static string test = "0";
-        static readonly byte[] byteArray = Encoding.ASCII.GetBytes(test);
-       static MemoryStream  stream = new MemoryStream(byteArray);
-        StreamReader reader = new StreamReader(stream);
+        static readonly byte[] ByteArray = Encoding.ASCII.GetBytes(test);
+       static readonly MemoryStream  stream = new MemoryStream(ByteArray);
+        readonly StreamReader reader = new StreamReader(stream);
         [Fact]
         public void TestFileExistsorNot()
         {
