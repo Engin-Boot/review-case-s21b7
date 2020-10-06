@@ -10,8 +10,8 @@ namespace Sender.Tests
         private readonly string _path= Environment.CurrentDirectory+ @"\Sender_csv\Sender_Csv_File.csv";
         static string test = "0";
         static readonly byte[] ByteArray = Encoding.ASCII.GetBytes(test);
-       static readonly MemoryStream  stream = new MemoryStream(ByteArray);
-        readonly StreamReader reader = new StreamReader(stream);
+       static readonly MemoryStream  Stream = new MemoryStream(ByteArray);
+        readonly StreamReader _reader = new StreamReader(Stream);
         [Fact]
         public void TestFileExistsorNot()
         {
@@ -56,7 +56,7 @@ namespace Sender.Tests
           
           
            
-            Console.SetIn(reader);
+            Console.SetIn(_reader);
 
             string[] actualWord = GetSeriesOfWords.ConvertCommentsToWords(_path);
 
@@ -93,7 +93,7 @@ namespace Sender.Tests
         public void csvFileReader_CheckAndReadCsvFile()
         {
            
-            Console.SetIn(reader);
+            Console.SetIn(_reader);
 
             bool expectedReadTrue = true;
             bool actualReadReturn = CsvFileReader.CheckAndReadCsvFile(_path);
