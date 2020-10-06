@@ -8,6 +8,10 @@ namespace Sender.Tests
     public class SenderUnitTest
     {
         private readonly string _path= Environment.CurrentDirectory+ @"\Sender_csv\Sender_Csv_File.csv";
+        static string test = "0";
+        static readonly byte[] byteArray = Encoding.ASCII.GetBytes(test);
+       static MemoryStream  stream = new MemoryStream(byteArray);
+        StreamReader reader = new StreamReader(stream);
         [Fact]
         public void TestFileExistsorNot()
         {
@@ -48,12 +52,9 @@ namespace Sender.Tests
         [Fact]
         public void TestGetSeriesOfWords()
         {
-            string test = "0";
-            byte[] byteArray = Encoding.ASCII.GetBytes(test);
-            MemoryStream stream = new MemoryStream(byteArray);
-            StreamReader reader = new StreamReader(stream);
-            //string test = "0";
-            //StreamReader input = new StreamReader(test);
+           
+          
+          
            
             Console.SetIn(reader);
 
@@ -91,15 +92,7 @@ namespace Sender.Tests
        // [ConsoleInput("0")]
         public void csvFileReader_CheckAndReadCsvFile()
         {
-            //string test = "0";
-            //StreamReader input = new StreamReader(test);
-            ////string text = reader.ReadToEnd();
-            // // var input = text ;
-            //Console.SetIn(input);
-            string test = "0";
-            byte[] byteArray = Encoding.ASCII.GetBytes(test);
-            MemoryStream stream = new MemoryStream(byteArray);
-            StreamReader reader = new StreamReader(stream);
+           
             Console.SetIn(reader);
 
             bool expectedReadTrue = true;
